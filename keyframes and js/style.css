@@ -1,0 +1,58 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.heart {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	margin: 0 10px;
+	position: absolute;
+	left: 0%;
+	top: 45%;
+	background-color: red;
+	transition: 4s ease;
+	transform: rotate(-45deg);
+	animation: anim_key 5s forwards;
+}
+.heart:nth-child(2) {
+	left: 10%;
+}
+.heart:nth-child(3) {
+	left: 20%;
+}
+.active {
+	left: 42%;
+}
+.active2 {
+	left: 50% !important;
+}
+.active3 {
+	left: 58% !important;
+}
+.heart:before,
+.heart:after {
+	content: "";
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	background-color: red;
+	border-radius: 50%;
+	animation: anim_key 5s 0s;
+}
+.heart:before {
+	top: -25px;
+	left: 0;
+}
+.heart:after {
+	left: 25px;
+	top: 0;
+}
+@keyframes anim_key {
+	0% {
+		background-color: rgb(39, 39, 39);
+	}
+	100% {
+		background-color: red;
+	}
+}
